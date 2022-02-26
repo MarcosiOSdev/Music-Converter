@@ -11,9 +11,8 @@
 		1D8236ED27C9979F00FCC50D /* ConvertTablatureToNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8236EC27C9979F00FCC50D /* ConvertTablatureToNoteView.swift */; };
 		1D8236EF27C997A000FCC50D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D8236EE27C997A000FCC50D /* Assets.xcassets */; };
 		1D8236F227C997A000FCC50D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D8236F127C997A000FCC50D /* Preview Assets.xcassets */; };
-		1D8236FC27C997A000FCC50D /* Music_ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8236FB27C997A000FCC50D /* Music_ConverterTests.swift */; };
+		1D8236FC27C997A000FCC50D /* ConvertTablatureToNoteViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8236FB27C997A000FCC50D /* ConvertTablatureToNoteViewModelTests.swift */; };
 		1D82370627C997A000FCC50D /* Music_ConverterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D82370527C997A000FCC50D /* Music_ConverterUITests.swift */; };
-		1D82370827C997A000FCC50D /* Music_ConverterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D82370727C997A000FCC50D /* Music_ConverterUITestsLaunchTests.swift */; };
 		1D82371727C9CB2B00FCC50D /* ConvertTablatureToNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D82371627C9CB2B00FCC50D /* ConvertTablatureToNoteViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,10 +40,9 @@
 		1D8236EE27C997A000FCC50D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D8236F127C997A000FCC50D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1D8236F727C997A000FCC50D /* Music ConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Music ConverterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D8236FB27C997A000FCC50D /* Music_ConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_ConverterTests.swift; sourceTree = "<group>"; };
+		1D8236FB27C997A000FCC50D /* ConvertTablatureToNoteViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertTablatureToNoteViewModelTests.swift; sourceTree = "<group>"; };
 		1D82370127C997A000FCC50D /* Music ConverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Music ConverterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D82370527C997A000FCC50D /* Music_ConverterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_ConverterUITests.swift; sourceTree = "<group>"; };
-		1D82370727C997A000FCC50D /* Music_ConverterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_ConverterUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1D82371627C9CB2B00FCC50D /* ConvertTablatureToNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertTablatureToNoteViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,7 +111,7 @@
 		1D8236FA27C997A000FCC50D /* Music ConverterTests */ = {
 			isa = PBXGroup;
 			children = (
-				1D8236FB27C997A000FCC50D /* Music_ConverterTests.swift */,
+				1D8236FB27C997A000FCC50D /* ConvertTablatureToNoteViewModelTests.swift */,
 			);
 			path = "Music ConverterTests";
 			sourceTree = "<group>";
@@ -122,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				1D82370527C997A000FCC50D /* Music_ConverterUITests.swift */,
-				1D82370727C997A000FCC50D /* Music_ConverterUITestsLaunchTests.swift */,
 			);
 			path = "Music ConverterUITests";
 			sourceTree = "<group>";
@@ -302,7 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D8236FC27C997A000FCC50D /* Music_ConverterTests.swift in Sources */,
+				1D8236FC27C997A000FCC50D /* ConvertTablatureToNoteViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,7 +308,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D82370627C997A000FCC50D /* Music_ConverterUITests.swift in Sources */,
-				1D82370827C997A000FCC50D /* Music_ConverterUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

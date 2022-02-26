@@ -59,7 +59,8 @@ class ConvertTablatureToNoteViewModel: ObservableObject {
     }
     
     private func convertDoubleToInt(_ doubleVal: Double) -> Int {
-        Int(round(doubleVal))
+        let doubleString = String(format: "%.1f", doubleVal).split(separator: ".")[0]
+        return Int(doubleString) ?? 0
     }
     
     private func convert(
