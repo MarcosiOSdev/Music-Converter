@@ -1,20 +1,22 @@
 //
-//  ContentView.swift
+//  ConvertTablatureToNoteViewModel.swift
 //  Music Converter
 //
 //  Created by marcos.felipe.souza on 25/02/22.
 //
 
-import SwiftUI
+import Foundation
+
 import Combine
 
-class ViewModel: ObservableObject {
-    
-    
+class ConvertTablatureToNoteViewModel: ObservableObject {
     
     // MARK: - Input Vars
     @Published
     var tablatureNoteSlider: Double = 0
+    
+    @Published
+    var tablatureNoteText: String = "0"
     
     @Published
     var noteSelected = 0
@@ -27,7 +29,7 @@ class ViewModel: ObservableObject {
     var convertedNote: String = ""
     
     var notes = ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"]
-    
+    var maxPosition = 24
     
     
     private var cancellables = Set<AnyCancellable>()
@@ -39,13 +41,26 @@ class ViewModel: ObservableObject {
                 let tablature = output.0
                 let note = self.notes[output.1]
                 
-                let postion = Int(round(tablature))
+                let postion = self.convertDoubleToInt(tablature)
                 self.tablatureNote = postion
+                self.tablatureNoteText = String(postion)
                 self.convertedNote = self.convert(note: note, position: postion)
                 
             }
             .store(in: &cancellables)
-    }    
+        
+        $tablatureNoteText
+            .compactMap { Int($0) }
+            .filter { $0 > 0 && $0 <= self.maxPosition && $0 != self.convertDoubleToInt(self.tablatureNoteSlider) }
+            .sink(receiveValue: { [weak self] output in
+                self?.tablatureNoteSlider = Double(output)
+            })
+            .store(in: &cancellables)
+    }
+    
+    private func convertDoubleToInt(_ doubleVal: Double) -> Int {
+        Int(round(doubleVal))
+    }
     
     private func convert(
         note: String,
@@ -66,50 +81,5 @@ class ViewModel: ObservableObject {
             }
         }
         return ""
-    }
-}
-
-
-struct ContentView: View {
-        
-    @ObservedObject
-    private var viewModel: ViewModel = ViewModel()
-        
-    var body: some View {
-        
-        NavigationView {
-        
-            Form {
-                
-                Section {
-                    Picker(selection: $viewModel.noteSelected) {
-                        ForEach(0 ..< viewModel.notes.count) {
-                            Text(viewModel.notes[$0])
-                        }
-                    } label: {
-                        Text("Nota")
-                    }
-                }
-                
-                Section {
-                    Slider(value: $viewModel.tablatureNoteSlider, in: 0...24)
-                    Text("Na posição: \(viewModel.tablatureNote)")
-                }
-                
-                Text("Nota na escala é: \(viewModel.convertedNote)")
-            }
-            .onAppear(perform: viewModel.onAppear)
-            .navigationBarTitle("Conversor Tablatura p/ Notas")
-
-        }
-    }
-    
-    
-    
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }

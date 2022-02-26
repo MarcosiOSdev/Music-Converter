@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1D8236EB27C9979F00FCC50D /* Music_ConverterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8236EA27C9979F00FCC50D /* Music_ConverterApp.swift */; };
-		1D8236ED27C9979F00FCC50D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8236EC27C9979F00FCC50D /* ContentView.swift */; };
+		1D8236ED27C9979F00FCC50D /* ConvertTablatureToNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8236EC27C9979F00FCC50D /* ConvertTablatureToNoteView.swift */; };
 		1D8236EF27C997A000FCC50D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D8236EE27C997A000FCC50D /* Assets.xcassets */; };
 		1D8236F227C997A000FCC50D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D8236F127C997A000FCC50D /* Preview Assets.xcassets */; };
 		1D8236FC27C997A000FCC50D /* Music_ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8236FB27C997A000FCC50D /* Music_ConverterTests.swift */; };
 		1D82370627C997A000FCC50D /* Music_ConverterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D82370527C997A000FCC50D /* Music_ConverterUITests.swift */; };
 		1D82370827C997A000FCC50D /* Music_ConverterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D82370727C997A000FCC50D /* Music_ConverterUITestsLaunchTests.swift */; };
+		1D82371727C9CB2B00FCC50D /* ConvertTablatureToNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D82371627C9CB2B00FCC50D /* ConvertTablatureToNoteViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		1D8236E727C9979F00FCC50D /* Music Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Converter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8236EA27C9979F00FCC50D /* Music_ConverterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_ConverterApp.swift; sourceTree = "<group>"; };
-		1D8236EC27C9979F00FCC50D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1D8236EC27C9979F00FCC50D /* ConvertTablatureToNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertTablatureToNoteView.swift; sourceTree = "<group>"; };
 		1D8236EE27C997A000FCC50D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D8236F127C997A000FCC50D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1D8236F727C997A000FCC50D /* Music ConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Music ConverterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +45,7 @@
 		1D82370127C997A000FCC50D /* Music ConverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Music ConverterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D82370527C997A000FCC50D /* Music_ConverterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_ConverterUITests.swift; sourceTree = "<group>"; };
 		1D82370727C997A000FCC50D /* Music_ConverterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_ConverterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1D82371627C9CB2B00FCC50D /* ConvertTablatureToNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertTablatureToNoteViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +96,8 @@
 		1D8236E927C9979F00FCC50D /* Music Converter */ = {
 			isa = PBXGroup;
 			children = (
-				1D8236EA27C9979F00FCC50D /* Music_ConverterApp.swift */,
-				1D8236EC27C9979F00FCC50D /* ContentView.swift */,
-				1D8236EE27C997A000FCC50D /* Assets.xcassets */,
-				1D8236F027C997A000FCC50D /* Preview Content */,
+				1D82371927C9CB7C00FCC50D /* Source */,
+				1D82371827C9CB7400FCC50D /* Resource */,
 			);
 			path = "Music Converter";
 			sourceTree = "<group>";
@@ -125,6 +125,41 @@
 				1D82370727C997A000FCC50D /* Music_ConverterUITestsLaunchTests.swift */,
 			);
 			path = "Music ConverterUITests";
+			sourceTree = "<group>";
+		};
+		1D82371427C9CAF600FCC50D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1D8236EA27C9979F00FCC50D /* Music_ConverterApp.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		1D82371527C9CAFE00FCC50D /* ConvertTablatureToNote */ = {
+			isa = PBXGroup;
+			children = (
+				1D8236EC27C9979F00FCC50D /* ConvertTablatureToNoteView.swift */,
+				1D82371627C9CB2B00FCC50D /* ConvertTablatureToNoteViewModel.swift */,
+			);
+			path = ConvertTablatureToNote;
+			sourceTree = "<group>";
+		};
+		1D82371827C9CB7400FCC50D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				1D8236EE27C997A000FCC50D /* Assets.xcassets */,
+				1D8236F027C997A000FCC50D /* Preview Content */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		1D82371927C9CB7C00FCC50D /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				1D82371427C9CAF600FCC50D /* Main */,
+				1D82371527C9CAFE00FCC50D /* ConvertTablatureToNote */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +292,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D8236ED27C9979F00FCC50D /* ContentView.swift in Sources */,
+				1D8236ED27C9979F00FCC50D /* ConvertTablatureToNoteView.swift in Sources */,
+				1D82371727C9CB2B00FCC50D /* ConvertTablatureToNoteViewModel.swift in Sources */,
 				1D8236EB27C9979F00FCC50D /* Music_ConverterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,7 +454,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Music Converter/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Music Converter/Resource/Preview Content\"";
 				DEVELOPMENT_TEAM = V2686JM7D9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -447,7 +483,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Music Converter/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Music Converter/Resource/Preview Content\"";
 				DEVELOPMENT_TEAM = V2686JM7D9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
