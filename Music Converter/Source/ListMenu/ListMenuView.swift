@@ -21,9 +21,3 @@ struct ListMenuView: View {
         }
     }
 }
-
-struct ListMenuView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListMenuView()
-    }
-}
