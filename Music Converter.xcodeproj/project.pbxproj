@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D49AA9827CAE1E300473C39 /* ListMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D49AA9727CAE1E300473C39 /* ListMenuView.swift */; };
 		1D8236EB27C9979F00FCC50D /* Music_ConverterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8236EA27C9979F00FCC50D /* Music_ConverterApp.swift */; };
 		1D8236ED27C9979F00FCC50D /* ConvertTablatureToNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8236EC27C9979F00FCC50D /* ConvertTablatureToNoteView.swift */; };
 		1D8236EF27C997A000FCC50D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D8236EE27C997A000FCC50D /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D49AA9727CAE1E300473C39 /* ListMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMenuView.swift; sourceTree = "<group>"; };
 		1D8236E727C9979F00FCC50D /* Music Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Converter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8236EA27C9979F00FCC50D /* Music_ConverterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_ConverterApp.swift; sourceTree = "<group>"; };
 		1D8236EC27C9979F00FCC50D /* ConvertTablatureToNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertTablatureToNoteView.swift; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D49AA9627CAE1CE00473C39 /* ListMenu */ = {
+			isa = PBXGroup;
+			children = (
+				1D49AA9727CAE1E300473C39 /* ListMenuView.swift */,
+			);
+			path = ListMenu;
+			sourceTree = "<group>";
+		};
 		1D8236DE27C9979E00FCC50D = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +163,7 @@
 		1D82371927C9CB7C00FCC50D /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				1D49AA9627CAE1CE00473C39 /* ListMenu */,
 				1D82371427C9CAF600FCC50D /* Main */,
 				1D82371527C9CAFE00FCC50D /* ConvertTablatureToNote */,
 			);
@@ -290,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D8236ED27C9979F00FCC50D /* ConvertTablatureToNoteView.swift in Sources */,
+				1D49AA9827CAE1E300473C39 /* ListMenuView.swift in Sources */,
 				1D82371727C9CB2B00FCC50D /* ConvertTablatureToNoteViewModel.swift in Sources */,
 				1D8236EB27C9979F00FCC50D /* Music_ConverterApp.swift in Sources */,
 			);
