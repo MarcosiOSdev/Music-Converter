@@ -10,31 +10,34 @@ import Combine
 
 class ViewModel: ObservableObject {
     
-    var notes = ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"]
     
+    
+    // MARK: - Input Vars
     @Published
     var tablatureNoteSlider: Double = 0
     
     @Published
-    var noteInput = ""
+    var noteSelected = 0
     
+    // MARK: - Output Vars
     @Published
     var tablatureNote: Int = 0
     
     @Published
     var convertedNote: String = ""
     
+    var notes = ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"]
+    
+    
+    
     private var cancellables = Set<AnyCancellable>()
     
     func onAppear() {
-        $tablatureNoteSlider.combineLatest($noteInput)
-            .filter({
-                self.notes.contains($0.1)
-            })
+        $tablatureNoteSlider.combineLatest($noteSelected)
             .sink { [weak self] output in
                 guard let self = self else { return }
                 let tablature = output.0
-                let note = output.1
+                let note = self.notes[output.1]
                 
                 let postion = Int(round(tablature))
                 self.tablatureNote = postion
@@ -42,8 +45,7 @@ class ViewModel: ObservableObject {
                 
             }
             .store(in: &cancellables)
-    }
-    
+    }    
     
     private func convert(
         note: String,
@@ -75,16 +77,31 @@ struct ContentView: View {
         
     var body: some View {
         
-        VStack(alignment: .leading, spacing: 8) {
-            TextField("Nota:", text: $viewModel.noteInput)
-            
-            VStack(alignment: .center) {
-                Slider(value: $viewModel.tablatureNoteSlider, in: 0...24)
-                Text("Na posição: \(viewModel.tablatureNote)")
+        NavigationView {
+        
+            Form {
+                
+                Section {
+                    Picker(selection: $viewModel.noteSelected) {
+                        ForEach(0 ..< viewModel.notes.count) {
+                            Text(viewModel.notes[$0])
+                        }
+                    } label: {
+                        Text("Nota")
+                    }
+                }
+                
+                Section {
+                    Slider(value: $viewModel.tablatureNoteSlider, in: 0...24)
+                    Text("Na posição: \(viewModel.tablatureNote)")
+                }
+                
+                Text("Nota na escala é: \(viewModel.convertedNote)")
             }
-            
-            Text("Nota na escala é: \(viewModel.convertedNote)")
-        }.onAppear(perform: viewModel.onAppear)
+            .onAppear(perform: viewModel.onAppear)
+            .navigationBarTitle("Conversor Tablatura p/ Notas")
+
+        }
     }
     
     
