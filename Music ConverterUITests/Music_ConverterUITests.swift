@@ -33,7 +33,7 @@ class Music_ConverterUITests: XCTestCase {
         tablesQuery.sliders["0"].adjust(toNormalizedSliderPosition: 0.8)
         tablesQuery.buttons["Nota"].tap()
         tablesQuery.switches["D"].tap()
-        app.navigationBars["_TtGC7SwiftUI19UIHosting"].buttons["Music Converter"].tap()
         
+        app.navigationBars["Conversor Tablatura p/ Notas"].buttons["Music Converter"].tap()
     }
 }

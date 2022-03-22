@@ -11,7 +11,7 @@ import Combine
 
 class ConvertTablatureToNoteViewModel: ObservableObject {
     
-    // MARK: - Input Vars
+    // MARK: Input Vars
     @Published
     var tablatureNoteSlider: Double = 0
     
@@ -21,7 +21,7 @@ class ConvertTablatureToNoteViewModel: ObservableObject {
     @Published
     var noteSelected = 0
     
-    // MARK: - Output Vars
+    // MARK: Output Vars
     @Published
     var tablatureNote: Int = 0
     
@@ -31,6 +31,7 @@ class ConvertTablatureToNoteViewModel: ObservableObject {
     var notes = ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"]
     var maxPosition = 24
     
+    // MARK: Stored Properties
     
     private var cancellables = Set<AnyCancellable>()
     

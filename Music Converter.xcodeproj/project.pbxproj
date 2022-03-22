@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1D49AA9827CAE1E300473C39 /* ListMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D49AA9727CAE1E300473C39 /* ListMenuView.swift */; };
 		1D49AA9B27CAE80D00473C39 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D49AA9A27CAE80D00473C39 /* View+Extension.swift */; };
+		1D49AA9D27CAE8CF00473C39 /* XCTest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D49AA9C27CAE8CF00473C39 /* XCTest+Extension.swift */; };
 		1D8236EB27C9979F00FCC50D /* Music_ConverterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8236EA27C9979F00FCC50D /* Music_ConverterApp.swift */; };
 		1D8236ED27C9979F00FCC50D /* ConvertTablatureToNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8236EC27C9979F00FCC50D /* ConvertTablatureToNoteView.swift */; };
 		1D8236EF27C997A000FCC50D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D8236EE27C997A000FCC50D /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		1D49AA9727CAE1E300473C39 /* ListMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMenuView.swift; sourceTree = "<group>"; };
 		1D49AA9A27CAE80D00473C39 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		1D49AA9C27CAE8CF00473C39 /* XCTest+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest+Extension.swift"; sourceTree = "<group>"; };
 		1D8236E727C9979F00FCC50D /* Music Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Converter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8236EA27C9979F00FCC50D /* Music_ConverterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_ConverterApp.swift; sourceTree = "<group>"; };
 		1D8236EC27C9979F00FCC50D /* ConvertTablatureToNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertTablatureToNoteView.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				1D8236FB27C997A000FCC50D /* ConvertTablatureToNoteViewModelTests.swift */,
+				1D49AA9C27CAE8CF00473C39 /* XCTest+Extension.swift */,
 			);
 			path = "Music ConverterTests";
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D49AA9D27CAE8CF00473C39 /* XCTest+Extension.swift in Sources */,
 				1D8236FC27C997A000FCC50D /* ConvertTablatureToNoteViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

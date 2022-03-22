@@ -27,7 +27,7 @@ struct ConvertTablatureToNoteView: View {
             }
             
             Section {
-                Slider(value: $viewModel.tablatureNoteSlider, in: 0...24)
+                Slider(value: $viewModel.tablatureNoteSlider, in: 0...Double(viewModel.maxPosition))
                 HStack {
                     Text("Na posição: ")
                     TextField("\(viewModel.tablatureNote)", text: $viewModel.tablatureNoteText)
