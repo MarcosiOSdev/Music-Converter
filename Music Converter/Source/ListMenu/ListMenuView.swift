@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct ListMenuView: View {
+    
+    var viewModel: ListMenuViewModel
+    
     var body: some View {
-        
-        NavigationView {
-            VStack(alignment: .leading, spacing: 8) {
-                NavigationLink("Converter Tablatura para Nota", destination: ConvertTablatureToNoteView())
-                
-                Spacer()
-            }
-            .padding()
-            .navigationTitle("Music Converter")
+        List(viewModel.items) { item in
+            Text(item.description)
+                .onTapGesture {
+                    viewModel.open(item)
+                }                
         }
+        .padding()
+        .navigationTitle("Music Converter")
     }
 }

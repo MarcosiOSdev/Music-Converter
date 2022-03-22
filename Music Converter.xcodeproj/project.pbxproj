@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D42687827EA7267009D2933 /* View+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42687727EA7267009D2933 /* View+Navigation.swift */; };
+		1D42687B27EA742D009D2933 /* ListMenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42687A27EA742D009D2933 /* ListMenuCoordinator.swift */; };
+		1D42687D27EA745E009D2933 /* ListMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42687C27EA745E009D2933 /* ListMenuViewModel.swift */; };
+		1D42687F27EA7484009D2933 /* ConvertTablatureToNoteCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42687E27EA7484009D2933 /* ConvertTablatureToNoteCoordinator.swift */; };
+		1D42688127EA7524009D2933 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42688027EA7524009D2933 /* MenuItem.swift */; };
 		1D49AA9827CAE1E300473C39 /* ListMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D49AA9727CAE1E300473C39 /* ListMenuView.swift */; };
-		1D49AA9B27CAE80D00473C39 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D49AA9A27CAE80D00473C39 /* View+Extension.swift */; };
+		1D49AA9B27CAE80D00473C39 /* View+HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D49AA9A27CAE80D00473C39 /* View+HideKeyboard.swift */; };
 		1D49AA9D27CAE8CF00473C39 /* XCTest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D49AA9C27CAE8CF00473C39 /* XCTest+Extension.swift */; };
 		1D8236EB27C9979F00FCC50D /* Music_ConverterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8236EA27C9979F00FCC50D /* Music_ConverterApp.swift */; };
 		1D8236ED27C9979F00FCC50D /* ConvertTablatureToNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8236EC27C9979F00FCC50D /* ConvertTablatureToNoteView.swift */; };
@@ -37,8 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D42687727EA7267009D2933 /* View+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Navigation.swift"; sourceTree = "<group>"; };
+		1D42687A27EA742D009D2933 /* ListMenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMenuCoordinator.swift; sourceTree = "<group>"; };
+		1D42687C27EA745E009D2933 /* ListMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMenuViewModel.swift; sourceTree = "<group>"; };
+		1D42687E27EA7484009D2933 /* ConvertTablatureToNoteCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertTablatureToNoteCoordinator.swift; sourceTree = "<group>"; };
+		1D42688027EA7524009D2933 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		1D49AA9727CAE1E300473C39 /* ListMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMenuView.swift; sourceTree = "<group>"; };
-		1D49AA9A27CAE80D00473C39 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		1D49AA9A27CAE80D00473C39 /* View+HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+HideKeyboard.swift"; sourceTree = "<group>"; };
 		1D49AA9C27CAE8CF00473C39 /* XCTest+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest+Extension.swift"; sourceTree = "<group>"; };
 		1D8236E727C9979F00FCC50D /* Music Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Converter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8236EA27C9979F00FCC50D /* Music_ConverterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_ConverterApp.swift; sourceTree = "<group>"; };
@@ -81,6 +91,9 @@
 			isa = PBXGroup;
 			children = (
 				1D49AA9727CAE1E300473C39 /* ListMenuView.swift */,
+				1D42687A27EA742D009D2933 /* ListMenuCoordinator.swift */,
+				1D42687C27EA745E009D2933 /* ListMenuViewModel.swift */,
+				1D42688027EA7524009D2933 /* MenuItem.swift */,
 			);
 			path = ListMenu;
 			sourceTree = "<group>";
@@ -88,7 +101,8 @@
 		1D49AA9927CAE80400473C39 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				1D49AA9A27CAE80D00473C39 /* View+Extension.swift */,
+				1D49AA9A27CAE80D00473C39 /* View+HideKeyboard.swift */,
+				1D42687727EA7267009D2933 /* View+Navigation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -160,6 +174,7 @@
 			children = (
 				1D8236EC27C9979F00FCC50D /* ConvertTablatureToNoteView.swift */,
 				1D82371627C9CB2B00FCC50D /* ConvertTablatureToNoteViewModel.swift */,
+				1D42687E27EA7484009D2933 /* ConvertTablatureToNoteCoordinator.swift */,
 			);
 			path = ConvertTablatureToNote;
 			sourceTree = "<group>";
@@ -316,9 +331,14 @@
 			files = (
 				1D8236ED27C9979F00FCC50D /* ConvertTablatureToNoteView.swift in Sources */,
 				1D49AA9827CAE1E300473C39 /* ListMenuView.swift in Sources */,
-				1D49AA9B27CAE80D00473C39 /* View+Extension.swift in Sources */,
+				1D42687827EA7267009D2933 /* View+Navigation.swift in Sources */,
+				1D42687B27EA742D009D2933 /* ListMenuCoordinator.swift in Sources */,
+				1D49AA9B27CAE80D00473C39 /* View+HideKeyboard.swift in Sources */,
 				1D82371727C9CB2B00FCC50D /* ConvertTablatureToNoteViewModel.swift in Sources */,
 				1D8236EB27C9979F00FCC50D /* Music_ConverterApp.swift in Sources */,
+				1D42687F27EA7484009D2933 /* ConvertTablatureToNoteCoordinator.swift in Sources */,
+				1D42687D27EA745E009D2933 /* ListMenuViewModel.swift in Sources */,
+				1D42688127EA7524009D2933 /* MenuItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

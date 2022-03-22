@@ -11,7 +11,7 @@ import SwiftUI
 struct Music_ConverterApp: App {
     var body: some Scene {
         WindowGroup {
-            ListMenuView()
+            ListMenuCoordinatorView(coordinator: ListMenuCoordinator())
         }
     }
 }

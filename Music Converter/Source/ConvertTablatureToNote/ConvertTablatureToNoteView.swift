@@ -10,7 +10,7 @@ import SwiftUI
 struct ConvertTablatureToNoteView: View {
     
     @ObservedObject
-    private var viewModel = ConvertTablatureToNoteViewModel()
+    var viewModel = ConvertTablatureToNoteViewModel()
     
     @FocusState private var focusedField: Bool
     
